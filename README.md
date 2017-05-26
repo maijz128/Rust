@@ -79,7 +79,7 @@ $ cargo run
 
 Filename: Cargo.toml
 
-```
+```toml
 [package]
 name = "hello_cargo"
 version = "0.1.0"
@@ -89,6 +89,7 @@ authors = ["Your Name <you@example.com>"]
 ```
 
 `[package]`部分为项目基本信息。
+
 `[dependencies]`部分为项目依赖的`crates`（我们这么称呼 Rust 代码包）列表。
 
 
@@ -298,6 +299,114 @@ let x1 = x.1; //  hello
 ### `()`
 
 ### `_`
+
+
+## 控制流
+
+### `if` 表达式
+
+
+```rust
+fn main() {
+    let number = 6;
+
+    if number % 4 == 0 {
+        println!("number is divisible by 4");
+    } else if number % 3 == 0 {
+        println!("number is divisible by 3");
+    } else if number % 2 == 0 {
+        println!("number is divisible by 2");
+    } else {
+        println!("number is not divisible by 4, 3, or 2");
+    }
+}
+```
+
+注：条件的值必须是`bool`。
+
+#### 在`let`语句中使用`if`
+
+```rust
+fn main() {
+    let condition = true;
+    let number = if condition {
+        5
+    } else {
+        6
+    };
+
+    println!("The value of number is: {}", number);
+}
+```
+
+注： `if` 和 `else` 分支的值类型必须是相同的。
+
+### 循环
+
+`break` 语句：终止整个循环
+
+`continue` 语句：结束本次循环
+
+#### `for` 
+
+反转输出 `1` 到 `3`
+
+```rust
+fn main() {
+    for number in (1..4).rev() {
+        println!("{}!", number);
+    }
+    println!("LIFTOFF!!!");
+}
+```
+
+遍历一个元素集合
+
+```rust
+fn main() {
+    let a = [10, 20, 30, 40, 50];
+
+    for element in a.iter() {
+        println!("the value is: {}", element);
+    }
+}
+```
+
+#### `while` 
+
+当条件为真，执行循环。当条件不再为真，停止循环。
+
+```rust
+fn main() {
+    let mut number = 3;
+
+    while number != 0  {
+        println!("{}!", number);
+
+        number = number - 1;
+    }
+
+    println!("LIFTOFF!!!");
+}
+``` 
+
+#### `loop` 
+
+`loop` 关键字告诉 Rust 一遍又一遍的执行一段代码直到你明确要求停止 `break`。
+
+```rust
+fn main() {
+    let mut count = 0;
+    loop{
+        if count >= 10 {
+            break;
+        } else {
+            count = count + 1;
+            println!("Count: {}", count);
+        }
+    }
+}
+```
 
 
 ## struct（结构体≈类）
