@@ -101,19 +101,6 @@
 
 
 数字类型列表：
-[i8]: <http://doc.rust-lang.org/nightly/std/primitive.i8.html>
-[i16]: <http://doc.rust-lang.org/nightly/std/primitive.i16.html>
-[i32]: <http://doc.rust-lang.org/nightly/std/primitive.i32.html>
-[i64]: <http://doc.rust-lang.org/nightly/std/primitive.i64.html>
-[u8]: <http://doc.rust-lang.org/nightly/std/primitive.u8.html>
-[u16]: <http://doc.rust-lang.org/nightly/std/primitive.u16.html>
-[u32]: <http://doc.rust-lang.org/nightly/std/primitive.u32.html>
-[u64]: <http://doc.rust-lang.org/nightly/std/primitive.u64.html>
-[isize]: <http://doc.rust-lang.org/nightly/std/primitive.isize.html>
-[usize]: <http://doc.rust-lang.org/nightly/std/primitive.usize.html>
-[f32]: <http://doc.rust-lang.org/nightly/std/primitive.f32.html>
-[f64]: <http://doc.rust-lang.org/nightly/std/primitive.f64.html>
-
 
 |       *  | 符号  |  位   |类型    |
 |----------|:-----:|:------:|:----:|
@@ -129,6 +116,19 @@
 |[usize][usize] | 无    | 依赖底层  | 整数
 |[f32][f32]     | 有    |  32      | 单精度浮点数
 |[f64][f64]     | 有    |  64      | 双精度浮点数
+
+[i8]: http://doc.rust-lang.org/nightly/std/primitive.i8.html
+[i16]: http://doc.rust-lang.org/nightly/std/primitive.i16.html
+[i32]: http://doc.rust-lang.org/nightly/std/primitive.i32.html
+[i64]: http://doc.rust-lang.org/nightly/std/primitive.i64.html
+[u8]: http://doc.rust-lang.org/nightly/std/primitive.u8.html
+[u16]: http://doc.rust-lang.org/nightly/std/primitive.u16.html
+[u32]: http://doc.rust-lang.org/nightly/std/primitive.u32.html
+[u64]: http://doc.rust-lang.org/nightly/std/primitive.u64.html
+[isize]: http://doc.rust-lang.org/nightly/std/primitive.isize.html
+[usize]: http://doc.rust-lang.org/nightly/std/primitive.usize.html
+[f32]: http://doc.rust-lang.org/nightly/std/primitive.f32.html
+[f64]: http://doc.rust-lang.org/nightly/std/primitive.f64.html
 
 
 ##### 数组
