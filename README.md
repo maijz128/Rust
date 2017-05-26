@@ -1,7 +1,23 @@
+
+<p align="center"><a href="http://www.rust-lang.org" target="_blank"><img src="https://www.rust-lang.org/logos/rust-logo-blk.svg"></a></p>
+
+<center><h3><a href="http://www.rust-lang.org">Rust</a> 是一种系统编程语言。 它有着惊人的运行速度，能够防止段错误，并保证线程安全。</h3>
+</center>
+
+
+
+
 # Rust 学习笔记
 
+### Rust Version: 1.17.0 (2017-04-27)
 
-### 变量
+
+
+----------
+
+
+
+## 变量
 
 ##### 绑定
 
@@ -30,18 +46,18 @@
     str = int;      //  ok
 
     //  c#
-    string  _str    = '123';
-    int     _int    =  123;
+    string  _str = "123";
+    int     _int =  123;
     _str =  _int;   //  error
 
     //  rust
-    let     _str    = '123';
-    let     _int    =  123;
-    let     _str    = _int;    //  ok
+    let _str = "123";
+    let _int =  123;
+    let _str = _int;    //  ok
 
 
 
-### 函数
+## 函数
 
 函数`add_nub`有一个名字是`nub`类型为`i32`的参数，和一个类型为`i32`的返回值，返回值是`nub + 1`表达式的结果
 
@@ -76,7 +92,7 @@
 
 
 
-### 原生类型
+## 原生类型
 
 ##### bool（布尔）
 
@@ -167,7 +183,7 @@
 ##### `_`
 
 
-### struct（结构体≈类）
+## struct（结构体≈类）
 
 例：
 
@@ -242,7 +258,7 @@ let sq = Rectangle::square(3);
 
 
 
-### 枚举（enum）
+## 枚举（enum）
 
 定义：
 
@@ -311,11 +327,11 @@ enum Option<T> {
 }
 ```
 
-### trait(≈接口)
+## trait(≈接口)
 
 
 
-### 泛型
+## 泛型
 
 ##### 泛型参数
 
@@ -364,7 +380,7 @@ enum Option<T> {
 
 
 
-### Test（测试）
+## Test（测试）
 
 ##### 运行测试
 
@@ -527,7 +543,7 @@ enum Option<T> {
 
 
 
-### 格式化输出（Formatted Print）
+## 格式化输出（Formatted Print）
 
 
 ##### println!
@@ -565,7 +581,7 @@ fn main() {
 
 
 
-### prelude（预加载）
+## prelude（预加载）
 
 ##### [`core::result`](https://doc.rust-lang.org/nightly/core/result/)
 
