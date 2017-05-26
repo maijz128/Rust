@@ -21,104 +21,125 @@
 
 ##### 绑定
 
-    let nub = 5;
+```rust
+let nub = 5;
+```
 
 ##### 类型注解
 
-    let nub: i32 = 5;
+```rust
+let nub: i32 = 5;
+```
 
 ##### 可变性
 
 变量默认不可变，可变需要设置为`mut`
 
-    let mut nub: i32 = 5;
-    nub = 11;
-
+```rust
+let mut nub: i32 = 5;
+nub = 11;
+```
 
 ##### 覆盖（Shadowing）
 
 定义一个与之前变量名称相同的新变量，而新变量会覆盖之前的变量。
 可以用相同变量名称来覆盖它自己以及重复使用let关键字来多次覆盖。
 
-    //  js
-    var str ='123';
-    var int = 123;
-    str = int;      //  ok
+```javascript
+//  js
+var str ='123';
+var int = 123;
+str = int;      //  ok
+```
 
-    //  c#
-    string  _str = "123";
-    int     _int =  123;
-    _str =  _int;   //  error
+```csharp
+//  c#
+string  _str = "123";
+int     _int =  123;
+_str =  _int;   //  error
+```
 
-    //  rust
-    let _str = "123";
-    let _int =  123;
-    let _str = _int;    //  ok
-
+```rust
+//  rust
+let _str = "123";
+let _int =  123;
+let _str = _int;    //  ok
+```
 
 
 ## 函数
 
 函数`add_nub`有一个名字是`nub`类型为`i32`的参数，和一个类型为`i32`的返回值，返回值是`nub + 1`表达式的结果
 
-    fn add_nub(nub: i32) -> i32{
-        // do some thing
+```rust
+fn add_nub(nub: i32) -> i32{
+    // do some thing
 
-        nub + 1
-    }
+    nub + 1
+}
+```
 
 ##### 提早返回`return`
 
-    fn foo(x: i32) -> i32 {
-        return x;
-    
-        // we never run this code!
-        x + 1
-    }
+```rust
+fn foo(x: i32) -> i32 {
+    return x;
+
+    // we never run this code!
+    x + 1
+}
+```
 
 ##### 函数指针
 
-    fn plus_one(i: i32) -> i32 {
-        i + 1
-    }
-    
-    // without type inference
-    let f: fn(i32) -> i32 = plus_one;
-    
-    // with type inference
-    let f = plus_one;
-    
-    let six = f(5);
+```rust
+fn plus_one(i: i32) -> i32 {
+    i + 1
+}
 
+// without type inference
+let f: fn(i32) -> i32 = plus_one;
+
+// with type inference
+let f = plus_one;
+
+let six = f(5);
+```
 
 
 ## 原生类型
 
 ##### bool（布尔）
 
-    let t = true;
-    
-    let f: bool = false;
+```rust
+let t = true;
+
+let f: bool = false;
+```
 
 ##### char
 
 `char`类型代表一个单独的 Unicode 字符的值。在Rust中`char`占4个字节
 
-    let x = 'x';
-    let two_hearts = '💕';
+```rust
+let x = 'x';
+let two_hearts = '💕';
+```
 
 ##### 数字类型
 
 默认类型：
 
-    let x = 42; // x has type i32
+```rust
+let x = 42; // x has type i32
 
-    let y = 1.0; // y has type f64
+let y = 1.0; // y has type f64
+```
 
 
 数字类型列表：
 
-|       *  | 符号  |  位   |类型    |
+|   type   | 符号  |  位   |类型    |
 |----------|:-----:|:------:|:----:|
 |[i8][i8]       | 有    |  8       | 整数
 |[i16][i16]     | 有    |  16      | 整数
@@ -152,12 +173,16 @@
 数组默认是不可变的。 
 类型是`[T; N]`。
 
-    let a = [1, 2, 3]; // a: [i32; 3]
-    let mut m = [1, 2, 3]; // m: [i32; 3]
+```rust
+let a = [1, 2, 3]; // a: [i32; 3]
+let mut m = [1, 2, 3]; // m: [i32; 3]
+```
 
 初始化简写：`a`的每个元素都被初始化为`1`
 
-    let a = [1, 20] // a: [i32; 20]
+```rust
+let a = [1, 20] // a: [i32; 20]
+```
 
 长度：`a.len()`
 
@@ -170,13 +195,16 @@
 
 元组（tuples）是固定大小的有序列表。
 
-    let x = (1, "hello");
+```rust
+let x = (1, "hello");
+```
 
 访问索引： 
 
-    let x0 = x.0; //  1
-    let x1 = x.1; //  hello
-
+```rust
+let x0 = x.0; //  1
+let x1 = x.1; //  hello
+```
 
 ##### `()`
 
@@ -187,7 +215,7 @@
 
 例：
 
-```
+```rust
 struct  User {
     username: String,
     email: String,
@@ -198,7 +226,7 @@ struct  User {
 
 使用：
 
-```
+```rust
 let user1 = User {
     email: String::from("someone@example.com"),
     username: String::from("someusername123"),
@@ -209,7 +237,7 @@ let user1 = User {
 
 获取成员：
 
-```
+```rust
 user1.username
 ```
 
@@ -218,7 +246,7 @@ user1.username
 
 定义和使用：
 
-```
+```rust
 struct Rectangle {
     length: u32,
     width: u32,
@@ -242,7 +270,7 @@ fn main() {
 
 ##### 关联函数（≈类方法）
 
-```
+```rust
 impl Rectangle {
     fn square(size: u32) -> Rectangle {
         Rectangle { length: size, width: size }
@@ -252,7 +280,7 @@ impl Rectangle {
 
 使用：
 
-```
+```rust
 let sq = Rectangle::square(3);
 ```
 
@@ -262,7 +290,7 @@ let sq = Rectangle::square(3);
 
 定义：
 
-```
+```rust
 enum IpAddrKind {
     V4,
     V6,
@@ -271,7 +299,7 @@ enum IpAddrKind {
 
 使用：
 
-```
+```rust
 let six = IpAddrKind::V6;
 
 fn route(ip_type: IpAddrKind) { 
@@ -283,7 +311,7 @@ route(IpAddrKind::V6);
 
 ##### 类型嵌入：
 
-```
+```rust
 enum Message {
     Quit,
     Move { x: i32, y: i32 },
@@ -305,7 +333,7 @@ enum Message {
 
 可以使用`impl`来为结构体定义方法那样，也可以在枚举上定义方法。
 
-```
+```rust
 impl Message {
     fn call(&self) {
         // method body would be defined here
@@ -320,7 +348,7 @@ m.call();
 
 标准库中的`Option<T>`
 
-```
+```rust
 enum Option<T> {
     Some(T),
     None,
@@ -337,46 +365,56 @@ enum Option<T> {
 
 函数`some_function`有一个参数`t`的类型为泛型`T`, 返回值的类型也是泛型`T`
 
-    fn some_function<T>(t: T) -> T {
-        // do some thing
-    }
+```rust
+fn some_function<T>(t: T) -> T {
+    // do some thing
+}
+```
 
 ##### 多泛型参数
 
-    fn some_function<T, U>(t: T, u: U) -> i32 {
-        // do some thing
-    }
-
+```rust
+fn some_function<T, U>(t: T, u: U) -> i32 {
+    // do some thing
+}
+```
 
 ##### 泛型限定
 
 泛型`T`的类型实现了`Summarizable`
 
-    pub fn notify<T: Summarizable>(item: T) {
-         // do some thing
-    }
-
+```rust
+pub fn notify<T: Summarizable>(item: T) {
+     // do some thing
+}
+```
 
 ##### 多泛型限定
 
 泛型`T`是任何实现了`Summarizable`和`CloneObj`的类型
 
-    pub fn notify<T: Summarizable + CloneObj>(item: T) {
-        // do some thing
-    }
+```rust
+pub fn notify<T: Summarizable + CloneObj>(item: T) {
+    // do some thing
+}
+```
 
 ##### where从句写法
 
-    fn some_function<T: Display + Clone, U: Clone + Debug>(t: T, u: U) -> i32 {
-        // do some thing
-    }
+```rust
+fn some_function<T: Display + Clone, U: Clone + Debug>(t: T, u: U) -> i32 {
+    // do some thing
+}
+```
+
 和下面的写法意思一样
 
-    fn some_function<T, U>(t: T, u: U) -> i32
-        where T: Display + Clone, U: Clone + Debug{
-        // do some thing
-    }
-
+```rust
+fn some_function<T, U>(t: T, u: U) -> i32
+    where T: Display + Clone, U: Clone + Debug{
+    // do some thing
+}
+```
 
 
 
@@ -386,15 +424,21 @@ enum Option<T> {
 
 默认并行的运行所有测试
 
-    cargo test
+```rust
+car go test
+```
 
 单线程运行所有测试，避免互相干涉
 
-    cargo test -- --test-threads=1
+```rust
+cargo test -- --test-threads=1
+```
 
 显示测试输出`println!`
 
-    cargo test -- --nocapture
+```rust
+cargo test -- --nocapture
+```
 
 通过名称来运行测试
 
@@ -405,111 +449,131 @@ enum Option<T> {
 
 忽略测试，增加`#[ignore]`行
 
-    #[test]
-    #[ignore]
-    fn expensive_test() {
-        // code that takes an hour to run
-    }
+```rust
+#[test]
+#[ignore]
+fn expensive_test() {
+    // code that takes an hour to run
+}
+```
 
 运行被忽略的测试
 
-    cargo test -- --ignored
+```rust
+cargo test -- --ignored
+```
 
 ##### Test范例
 
-    #[cfg(test)]
-    mod tests {
-        #[test]
-        fn it_works() {
-        }
+```rust
+#[cfg(test)]
+mod tests {
+    #[test]
+    fn it_works() {
     }
-
+}
+```
 
 ##### assert宏
 
 `assert!` : 条件是否为`true`
 
-    let is_true:bool = 1 > 0;    
-    assert!(is_true);
+```rust
+let is_true:bool = 1 > 0;    
+assert!(is_true);
+```
 
 `assert_eq!` : 比较两个参数是否相等
 
-    let a:i32 = 23;
-    let b:i32 = 23;
-    assert_eq!(a, b);
+```rust
+let a:i32 = 23;
+let b:i32 = 23;
+assert_eq!(a, b);
+```
 
 `assert_ne!` : 比较两个参数是否不相等
 
-    let a:i32 = 32;
-    let b:i32 = 23;
-    assert_ne!(a, b);
+```rust
+let a:i32 = 32;
+let b:i32 = 23;
+assert_ne!(a, b);
+```
 
 ##### 自定义错误信息
 
 `assert!` : 条件是否为`true`
 
-    let is_true:bool = 1 < 0;    
-    assert!(is_true, "is_true : {}", is_true);
+```rust
+let is_true:bool = 1 < 0;    
+assert!(is_true, "is_true : {}", is_true);
+```
 
 `assert_eq!` : 比较两个参数是否相等
 
-    let a:i32 = 32;
-    let b:i32 = 23;
-    assert_eq!(a, b, "a: {}, b: {}", a, b);
+```rust
+let a:i32 = 32;
+let b:i32 = 23;
+assert_eq!(a, b, "a: {}, b: {}", a, b);
+```
 
 `assert_ne!` : 比较两个参数是否不相等
 
-    let a:i32 = 23;
-    let b:i32 = 23;
-    assert_ne!(a, b, "a: {}, b: {}", a, b);
+```rust
+let a:i32 = 23;
+let b:i32 = 23;
+assert_ne!(a, b, "a: {}, b: {}", a, b);
+```
 
 ##### 使用`should_panic`检查 panic
 
 检查代码是否按预期一样触发`panic!`
 
-    #[cfg(test)]
-    mod tests {
-    
-        #[test]
-        #[should_panic]
-        fn fun1() {
-            // do some thing
-        }
+```rust
+#[cfg(test)]
+mod tests {
+
+    #[test]
+    #[should_panic]
+    fn fun1() {
+        // do some thing
     }
+}
+```
 
 添加`expected`参数，确保错误信息中包含其提供的文本
 
-    struct Guess {
-        value: u32,
-    }
-    
-    impl Guess {
-        pub fn new(value: u32) -> Guess {
-            if value < 1 {
-                panic!("Guess value must be greater than or equal to 1, got {}.",
-                       value);
-            } else if value > 100 {
-                panic!("Guess value must be less than or equal to 100, got {}.",
-                       value);
-            }
-    
-            Guess {
-                value: value,
-            }
-        }
-    }
-    
-    #[cfg(test)]
-    mod tests {
-        use super::*;
-    
-        #[test]
-        #[should_panic(expected = "Guess value must be less than or equal to 100")]
-        fn greater_than_100() {
-            Guess::new(200);
-        }
-    }
+```rust
+struct Guess {
+    value: u32,
+}
 
+impl Guess {
+    pub fn new(value: u32) -> Guess {
+        if value < 1 {
+            panic!("Guess value must be greater than or equal to 1, got {}.",
+                   value);
+        } else if value > 100 {
+            panic!("Guess value must be less than or equal to 100, got {}.",
+                   value);
+        }
+
+        Guess {
+            value: value,
+        }
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    #[should_panic(expected = "Guess value must be less than or equal to 100")]
+    fn greater_than_100() {
+        Guess::new(200);
+    }
+}
+```
 
 ##### 集成测试
 
@@ -517,17 +581,20 @@ enum Option<T> {
 
 例：Filename: tests/integration_test.rs
 
-    extern crate adder; // 导入被测试的库
-    
-    #[test]
-    fn it_adds_two() {
-        assert_eq!(4, adder::add_two(2));
-    }
+```rust
+extern crate adder; // 导入被测试的库
 
+#[test]
+fn it_adds_two() {
+    assert_eq!(4, adder::add_two(2));
+}
+```
 
 运行指定文件名的集成测试
 
-     cargo test --test integration_test
+```rust
+cargo test --test integration_test
+```
 
 
 集成测试中的子模块
@@ -549,7 +616,7 @@ enum Option<T> {
 ##### println!
 
 
-```
+```rust
 let a = 1;
 let b = 2;
 println!("a: {}, b: {}", a, b);
@@ -561,7 +628,7 @@ println!("a: {}, b: {}", a, b);
 
 ##### 输出结构体（struct）
 
-```
+```rust
 #[derive(Debug)]
 struct Rectangle {
     length: u32,
@@ -585,7 +652,7 @@ fn main() {
 
 ##### [`core::result`](https://doc.rust-lang.org/nightly/core/result/)
 
-```
+```rust
 enum Result<T, E> {
    Ok(T),
    Err(E),
@@ -594,7 +661,7 @@ enum Result<T, E> {
 
 ##### [`core::option`](https://doc.rust-lang.org/nightly/core/option/)
 
-```
+```rust
 enum Option<T> {
     None,
     Some(T),
