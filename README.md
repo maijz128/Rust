@@ -1,5 +1,5 @@
 
-<p align="center"><a target="_blank" href="http://www.rust-lang.org"><img src="rust-logo-blk.svg"></a></p>
+<p align="center"><a target="_blank" href="http://www.rust-lang.org"><img src="rust-logo-256x256-blk.png"></a></p>
 
 <center><h3><a target="_blank" href="http://www.rust-lang.org">Rust</a> 是一种系统编程语言。 它有着惊人的运行速度，能够防止段错误，并保证线程安全。</h3>
 </center>
