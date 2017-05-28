@@ -417,3 +417,43 @@ fn main() {
 
 ## 注释
 
+### 行注释（line comments）
+
+```rust
+// Line comments are anything after ‘//’ and extend to the end of the line.
+
+let x = 5; // this is also a line comment.
+```
+
+
+### 文档注释（doc comments）
+
+文档注释使用///而不是//，并且内建Markdown标记支持：
+
+```rust
+/// Adds one to the number given.
+///
+/// # Examples
+///
+/// 
+/// let five = 5;
+///
+/// assert_eq!(6, add_one(5));
+/// # fn add_one(x: i32) -> i32 {
+/// #     x + 1
+/// # }
+/// 
+fn add_one(x: i32) -> i32 {
+    x + 1
+}
+```
+
+
+
+可以使用 `rustdoc`工具来将文档注释生成为HTML文档，也可以将代码示例作为测试运行！
+
+Cargo生成HTML文档:
+
+```
+$ cargo doc
+```
