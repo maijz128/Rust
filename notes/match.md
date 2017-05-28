@@ -107,17 +107,17 @@ match x {
 
 ## `if let` 简单控制流
 
-匹配一个 `Option<u8>` 值并只希望当值是三时执行代码：
+匹配一个 `Option<u8>` 值并只希望当值是 `3` 时执行代码：
 
 ```rust
-let some_u8_value = Some(0u8);
+let some_u8_value = Some(3u8);
 
 match some_u8_value {
     Some(3) => println!("three"),
     _ => (),
 }
 
-if let Some(3) = some_u8_value {
+if let Some(3u8) = some_u8_value {
     println!("three");
 }
 ``` 

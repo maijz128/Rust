@@ -21,18 +21,21 @@
     4. [运算符](notes/base.md#运算符)
     5. [控制流](notes/base.md#控制流)
     6. [注释](notes/base.md#注释)
-3. [所有权](notes/ownership.md)
+3. 语言核心
+    1. [所有权](notes/ownership.md)
+    2. [生命周期](notes/lifetime.md)
 4. [结构体、枚举、trait](notes/struct-enum-trait.md)
     1. [结构体](notes/struct-enum-trait.md#结构体struct)
     2. [枚举](notes/struct-enum-trait.md#枚举enum)
     3. [trait](notes/struct-enum-trait.md#trait)
-5. [模式匹配](notes/match.md)
-    1. [`match` 控制流运算符](notes/match.md#match-控制流运算符)
-    2. [`if let` 简单控制流](notes/match.md#if-let-简单控制流)
-6. [泛型](notes/generics.md)
-7. [生命周期](notes/lifetime.md)
-8. [测试](notes/testing.md)
-9. [交叉编译](notes/cross-compiler.md)
+5. 语言高阶
+    1. [模式匹配](notes/match.md)
+        1. [`match` 控制流运算符](notes/match.md#match-控制流运算符)
+        2. [`if let` 简单控制流](notes/match.md#if-let-简单控制流)
+    2. [泛型](notes/generics.md)
+    3. [运算符重载](notes/more.md#运算符重载)
+6. [测试](notes/testing.md)
+7. [交叉编译](notes/cross-compiler.md)
 
 
 

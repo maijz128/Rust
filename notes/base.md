@@ -223,21 +223,21 @@ let x1 = x.1; //  hello
 ----------|:---------:|:---------:
 ==        |  等于     |   [PartialEq][PartialEq]
 !=        |  不等于   |   [PartialEq][PartialEq]
-\>      |  大于     |   [PartialOrd][PartialOrd]
-\>=     |  大于等于  |  [PartialOrd][PartialOrd]
+\>        |  大于     |   [PartialOrd][PartialOrd]
+\>=       |  大于等于  |  [PartialOrd][PartialOrd]
 <         |  小于     |   [PartialOrd][PartialOrd]
 <=        |  小于等于  |  [PartialOrd][PartialOrd]
 &#124;&#124;          |   逻辑或
-&&                    |   逻辑和
+&&                    |   逻辑与
 
 [PartialEq]: https://doc.rust-lang.org/core/cmp/trait.PartialEq.html
 [PartialOrd]: https://doc.rust-lang.org/core/cmp/trait.PartialOrd.html
 
 算术运算符 |   作用     | 重载（trait）
 ----------|:----------:|:---------:
-\+         |  加法      |   [Add][Add]
-\-         |  减法      |   [Sub][Sub]
-\*         |  乘法      |   [Mul][Mul]
+\+        |  加法      |   [Add][Add]
+\-        |  减法      |   [Sub][Sub]
+\*        |  乘法      |   [Mul][Mul]
 /         |  除法      |   [Div][Div]
 %         |  取余      |   [Rem][Rem]
 +=        |  加法并赋值 |   [AddAssign][AddAssign]
@@ -261,8 +261,8 @@ let x1 = x.1; //  hello
 
 单目运算符 |  作用     | 重载（trait）
 ----------|:---------:|:---------:
-\-         |  取反              |   [Neg][Neg]
-!         |  位互补或逻辑互补   |   [Not][Not]
+\-        |  取反      |   [Neg][Neg]
+!         |  逻辑非    |   [Not][Not]
 
 [Neg]: https://doc.rust-lang.org/core/ops/trait.Neg.html
 [Not]: https://doc.rust-lang.org/core/ops/trait.Not.html
@@ -270,16 +270,16 @@ let x1 = x.1; //  hello
 
 位运算符  |  作用     | 重载（trait）
 ---------|:---------:|:---------:
-<<       |  左移     |   [Shl][Shl]
-\>\>       |  右移     |   [Shr][Shr]
-&#124;   |  或       |   [BitOr][BitOr]
-^        |  异或     |   [BitXor][BitXor]
-&        |  和       |   [BitAnd][BitAnd]
-<<=      |  左移 并赋值 |  [ShlAssign][ShlAssign]
-\>\>=      |  右移 并赋值 |  [ShrAssign][ShrAssign]
-&#124;=  |  或 并赋值   |  [BitOrAssign][BitOrAssign]
-^=       |  异或 并赋值 |  [BitXorAssign][BitXor]
-&=       |  和 并赋值   | [BitAndAssign][BitAndAssign]
+<<       |  左移       |   [Shl][Shl]
+\>\>     |  右移       |   [Shr][Shr]
+&#124;   |  按位或      |   [BitOr][BitOr]
+^        |  按位异或    |   [BitXor][BitXor]
+&        |  按位与      |   [BitAnd][BitAnd]
+<<=      |  左移并赋值   |  [ShlAssign][ShlAssign]
+\>\>=    |  右移并赋值   |  [ShrAssign][ShrAssign]
+&#124;=  |  按位或并赋值   |  [BitOrAssign][BitOrAssign]
+^=       |  按位异或并赋值 |  [BitXorAssign][BitXor]
+&=       |  按位与并赋值   | [BitAndAssign][BitAndAssign]
 
 [Shl]: https://doc.rust-lang.org/core/ops/trait.Shl.html
 [Shr]: https://doc.rust-lang.org/core/ops/trait.Shr.html
@@ -303,7 +303,8 @@ value++; // error
 value--; // error
 ```
 
-### 运算符重载
+
+
 
 
 ## 控制流
