@@ -223,8 +223,8 @@ let x1 = x.1; //  hello
 ----------|:---------:|:---------:
 ==        |  等于     |   [PartialEq][PartialEq]
 !=        |  不等于   |   [PartialEq][PartialEq]
->         |  大于     |   [PartialOrd][PartialOrd]
->=        |  大于等于  |  [PartialOrd][PartialOrd]
+\>      |  大于     |   [PartialOrd][PartialOrd]
+\>=     |  大于等于  |  [PartialOrd][PartialOrd]
 <         |  小于     |   [PartialOrd][PartialOrd]
 <=        |  小于等于  |  [PartialOrd][PartialOrd]
 &#124;&#124;          |   逻辑或
@@ -235,9 +235,9 @@ let x1 = x.1; //  hello
 
 算术运算符 |   作用     | 重载（trait）
 ----------|:----------:|:---------:
-+         |  加法      |   [Add][Add]
--         |  减法      |   [Sub][Sub]
-*         |  乘法      |   [Mul][Mul]
+\+         |  加法      |   [Add][Add]
+\-         |  减法      |   [Sub][Sub]
+\*         |  乘法      |   [Mul][Mul]
 /         |  除法      |   [Div][Div]
 %         |  取余      |   [Rem][Rem]
 +=        |  加法并赋值 |   [AddAssign][AddAssign]
@@ -261,7 +261,7 @@ let x1 = x.1; //  hello
 
 单目运算符 |  作用     | 重载（trait）
 ----------|:---------:|:---------:
--         |  取反              |   [Neg][Neg]
+\-         |  取反              |   [Neg][Neg]
 !         |  位互补或逻辑互补   |   [Not][Not]
 
 [Neg]: https://doc.rust-lang.org/core/ops/trait.Neg.html
@@ -271,12 +271,12 @@ let x1 = x.1; //  hello
 位运算符  |  作用     | 重载（trait）
 ---------|:---------:|:---------:
 <<       |  左移     |   [Shl][Shl]
->>       |  右移     |   [Shr][Shr]
+\>\>       |  右移     |   [Shr][Shr]
 &#124;   |  或       |   [BitOr][BitOr]
 ^        |  异或     |   [BitXor][BitXor]
 &        |  和       |   [BitAnd][BitAnd]
 <<=      |  左移 并赋值 |  [ShlAssign][ShlAssign]
->>=      |  右移 并赋值 |  [ShrAssign][ShrAssign]
+\>\>=      |  右移 并赋值 |  [ShrAssign][ShrAssign]
 &#124;=  |  或 并赋值   |  [BitOrAssign][BitOrAssign]
 ^=       |  异或 并赋值 |  [BitXorAssign][BitXor]
 &=       |  和 并赋值   | [BitAndAssign][BitAndAssign]
