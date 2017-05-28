@@ -1,7 +1,7 @@
 
 # 模式匹配
 
-### `match` 控制流运算符
+## `match` 控制流运算符
 
 例子：硬币（美国）分类器
 
@@ -36,7 +36,7 @@ fn value_in_cents(coin: Coin) -> i32 {
 }
 ```
 
-匹配 `Option<T>` ：
+### 匹配 `Option<T>` ：
 
 ```rust
 fn plus_one(x: Option<i32>) -> Option<i32> {
@@ -54,7 +54,7 @@ let none = plus_one(None);
 注：Rust 中的匹配是穷尽的（*exhaustive）：必须穷举到最后的可能性来使代码有效。
 
 
-#### `_` 通配符
+### `_` 通配符
 
 ```rust
 let some_u8_value = 0u8;
@@ -69,7 +69,7 @@ match some_u8_value {
 
 `_` 模式会匹配所有的值。`()` 就是 unit 值，所以 `_` 的情况什么也不会发生。
 
-#### 多重模式（Multiple patterns）
+### 多重模式（Multiple patterns）
 
 ```rust
 let x = 1;
@@ -81,7 +81,7 @@ match x {
 }
 ```
 
-#### 范围（Ranges）
+### 范围（Ranges）
 
 ```rust
 let x = 1;
@@ -92,7 +92,7 @@ match x {
 }
 ```
 
-#### 绑定
+### 绑定
 
 使用@把值绑定到名字上：
 
@@ -105,7 +105,7 @@ match x {
 }
 ```
 
-### `if let` 简单控制流
+## `if let` 简单控制流
 
 匹配一个 `Option<u8>` 值并只希望当值是三时执行代码：
 

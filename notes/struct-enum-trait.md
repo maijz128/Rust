@@ -1,7 +1,9 @@
 
 
 
-## 结构体（struct） ≈ 类
+## 结构体（struct）
+
+Rust中的结构体相当于其他语言的类（Class）
 
 例：
 
@@ -32,7 +34,7 @@ user1.username
 ```
 
 
-##### 方法
+### 方法
 
 定义和使用：
 
@@ -58,7 +60,7 @@ fn main() {
 }
 ```
 
-##### 关联函数 ≈ 类方法
+### 关联函数 ≈ 类方法
 
 ```rust
 impl Rectangle {
@@ -74,7 +76,7 @@ impl Rectangle {
 let sq = Rectangle::square(3);
 ```
 
-##### 输出结构体（struct）
+### 输出结构体（struct）
 
 ```rust
 #[derive(Debug)]
@@ -119,7 +121,7 @@ fn route(ip_type: IpAddrKind) {
 route(IpAddrKind::V6);
 ```
 
-##### 类型嵌入：
+### 类型嵌入：
 
 ```rust
 enum Message {
@@ -139,7 +141,7 @@ enum Message {
 - `ChangeColor`包含三个`i32`。
 
 
-##### 方法
+### 方法
 
 可以使用`impl`来为结构体定义方法那样，也可以在枚举上定义方法。
 
@@ -154,7 +156,7 @@ let m = Message::Write(String::from("hello"));
 m.call();
 ```
 
-##### 泛型
+### 泛型
 
 标准库中的`Option<T>`
 
@@ -166,7 +168,9 @@ enum Option<T> {
 ```
 
 
-## trait ≈ 接口
+## trait
+
+Rust中的 `trait` 相当于其他语言的接口（Interface）
 
 
 
