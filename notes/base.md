@@ -156,43 +156,20 @@ let y = 1.0; // y has type f64
 |[f32][f32]     | 有    |  32      | 单精度浮点数
 |[f64][f64]     | 有    |  64      | 双精度浮点数
 
-[i8]: http://doc.rust-lang.org/nightly/std/primitive.i8.html
-[i16]: http://doc.rust-lang.org/nightly/std/primitive.i16.html
-[i32]: http://doc.rust-lang.org/nightly/std/primitive.i32.html
-[i64]: http://doc.rust-lang.org/nightly/std/primitive.i64.html
-[u8]: http://doc.rust-lang.org/nightly/std/primitive.u8.html
-[u16]: http://doc.rust-lang.org/nightly/std/primitive.u16.html
-[u32]: http://doc.rust-lang.org/nightly/std/primitive.u32.html
-[u64]: http://doc.rust-lang.org/nightly/std/primitive.u64.html
-[isize]: http://doc.rust-lang.org/nightly/std/primitive.isize.html
-[usize]: http://doc.rust-lang.org/nightly/std/primitive.usize.html
-[f32]: http://doc.rust-lang.org/nightly/std/primitive.f32.html
-[f64]: http://doc.rust-lang.org/nightly/std/primitive.f64.html
+[i8]: http://doc.rust-lang.org/std/primitive.i8.html
+[i16]: http://doc.rust-lang.org/std/primitive.i16.html
+[i32]: http://doc.rust-lang.org/std/primitive.i32.html
+[i64]: http://doc.rust-lang.org/std/primitive.i64.html
+[u8]: http://doc.rust-lang.org/std/primitive.u8.html
+[u16]: http://doc.rust-lang.org/std/primitive.u16.html
+[u32]: http://doc.rust-lang.org/std/primitive.u32.html
+[u64]: http://doc.rust-lang.org/std/primitive.u64.html
+[isize]: http://doc.rust-lang.org/std/primitive.isize.html
+[usize]: http://doc.rust-lang.org/std/primitive.usize.html
+[f32]: http://doc.rust-lang.org/std/primitive.f32.html
+[f64]: http://doc.rust-lang.org/std/primitive.f64.html
 
 
-
-### 运算符
-
-基本数学运算操作：加法、减法、乘法、除法以及余数。
-
-```rust
-fn main() {
-    // addition
-    let sum = 5 + 10;
-
-    // subtraction
-    let difference = 95.5 - 4.3;
-
-    // multiplication
-    let product = 4 * 30;
-
-    // division
-    let quotient = 56.7 / 32.2;
-
-    // remainder
-    let remainder = 43 % 5;
-}
-```
 
 ### 数组
 
@@ -239,6 +216,94 @@ let x1 = x.1; //  hello
 
 
 
+## 运算符
+
+
+关系运算符 |  作用     | 重载（trait）
+----------|:---------:|:---------:
+==        |  等于     |   [PartialEq][PartialEq]
+!=        |  不等于   |   [PartialEq][PartialEq]
+>         |  大于     |   [PartialOrd][PartialOrd]
+>=        |  大于等于  |  [PartialOrd][PartialOrd]
+<         |  小于     |   [PartialOrd][PartialOrd]
+<=        |  小于等于  |  [PartialOrd][PartialOrd]
+&#124;&#124;          |   逻辑或
+&&                    |   逻辑和
+
+[PartialEq]: https://doc.rust-lang.org/core/cmp/trait.PartialEq.html
+[PartialOrd]: https://doc.rust-lang.org/core/cmp/trait.PartialOrd.html
+
+算术运算符 |   作用     | 重载（trait）
+----------|:----------:|:---------:
++         |  加法      |   [Add][Add]
+-         |  减法      |   [Sub][Sub]
+*         |  乘法      |   [Mul][Mul]
+/         |  除法      |   [Div][Div]
+%         |  取余      |   [Rem][Rem]
++=        |  加法并赋值 |   [AddAssign][AddAssign]
+-=        |  减法并赋值 |   [SubAssign][SubAssign]
+*=        |  乘法并赋值 |   [MulAssign][MulAssign]
+/=        |  除法并赋值 |   [DivAssign][DivAssign]
+%=        |  取余并赋值 |   [RemAssign][RemAssign]
+
+[Add]: https://doc.rust-lang.org/core/ops/trait.Add.html
+[Sub]: https://doc.rust-lang.org/core/ops/trait.Sub.html
+[Mul]: https://doc.rust-lang.org/core/ops/trait.Mul.html
+[Div]: https://doc.rust-lang.org/core/ops/trait.Div.html
+[Rem]: https://doc.rust-lang.org/core/ops/trait.Rem.html
+
+[AddAssign]: https://doc.rust-lang.org/core/ops/trait.AddAssign.html
+[SubAssign]: https://doc.rust-lang.org/core/ops/trait.SubAssign.html
+[MulAssign]: https://doc.rust-lang.org/core/ops/trait.MulAssign.html
+[DivAssign]: https://doc.rust-lang.org/core/ops/trait.DivAssign.html
+[RemAssign]: https://doc.rust-lang.org/core/ops/trait.RemAssign.html
+
+
+单目运算符 |  作用     | 重载（trait）
+----------|:---------:|:---------:
+-         |  取反              |   [Neg][Neg]
+!         |  位互补或逻辑互补   |   [Not][Not]
+
+[Neg]: https://doc.rust-lang.org/core/ops/trait.Neg.html
+[Not]: https://doc.rust-lang.org/core/ops/trait.Not.html
+
+
+位运算符  |  作用     | 重载（trait）
+---------|:---------:|:---------:
+<<       |  左移     |   [Shl][Shl]
+>>       |  右移     |   [Shr][Shr]
+&#124;   |  或       |   [BitOr][BitOr]
+^        |  异或     |   [BitXor][BitXor]
+&        |  和       |   [BitAnd][BitAnd]
+<<=      |  左移 并赋值 |  [ShlAssign][ShlAssign]
+>>=      |  右移 并赋值 |  [ShrAssign][ShrAssign]
+&#124;=  |  或 并赋值   |  [BitOrAssign][BitOrAssign]
+^=       |  异或 并赋值 |  [BitXorAssign][BitXor]
+&=       |  和 并赋值   | [BitAndAssign][BitAndAssign]
+
+[Shl]: https://doc.rust-lang.org/core/ops/trait.Shl.html
+[Shr]: https://doc.rust-lang.org/core/ops/trait.Shr.html
+[BitOr]: https://doc.rust-lang.org/core/ops/trait.BitOr.html
+[BitXor]: https://doc.rust-lang.org/core/ops/trait.BitXor.html
+[BitAnd]: https://doc.rust-lang.org/core/ops/trait.BitAnd.html
+
+[ShlAssign]: https://doc.rust-lang.org/core/ops/trait.ShlAssign.html
+[ShrAssign]: https://doc.rust-lang.org/core/ops/trait.ShrAssign.html
+[BitOrAssign]: https://doc.rust-lang.org/core/ops/trait.BitOrAssign.html
+[BitXorAssign]: https://doc.rust-lang.org/core/ops/trait.BitXorAssign.html
+[BitAndAssign]: https://doc.rust-lang.org/core/ops/trait.BitAndAssign.html
+
+
+不支持自增`++`、自减`--`
+
+```rust
+let mut value = 3;
+
+value++; // error
+value--; // error
+```
+
+### 运算符重载
 
 
 ## 控制流
