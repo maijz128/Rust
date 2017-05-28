@@ -428,7 +428,7 @@ let x = 5; // this is also a line comment.
 
 ### 文档注释（doc comments）
 
-文档注释使用///而不是//，并且内建Markdown标记支持：
+文档注释使用 `///` 而不是 `//`，并且内建[Markdown](http://en.wikipedia.org/wiki/Markdown)标记支持：
 
 ```rust
 /// Adds one to the number given.
@@ -448,12 +448,19 @@ fn add_one(x: i32) -> i32 {
 }
 ```
 
+#### 文档注释-Toggle样式
 
+
+使用 `//!` 的注释块，在HTML文档中可以切换显示或隐藏。
+
+
+
+### 生成HTML文档
 
 可以使用 `rustdoc`工具来将文档注释生成为HTML文档，也可以将代码示例作为测试运行！
 
-Cargo生成HTML文档:
+Cargo生成HTML文档并打开:
 
 ```
-$ cargo doc
+$ cargo doc --open
 ```
