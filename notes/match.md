@@ -1,7 +1,7 @@
 
 # 模式匹配
 
-## `match` 控制流运算符
+## `match`
 
 例子：硬币（美国）分类器
 
@@ -105,7 +105,7 @@ match x {
 }
 ```
 
-## `if let` 简单控制流
+## `if let` 简单匹配
 
 匹配一个 `Option<u8>` 值并只希望当值是 `3` 时执行代码：
 
@@ -138,3 +138,31 @@ if let Coin::Quarter(state) = coin {
     count += 1;
 }
 ```
+
+## while let 循环匹配
+
+```rust
+fn main() {
+    // 将 `optional` 设为 `Option<i32>` 类型
+    let mut optional = Some(0);
+
+    // 分析：当 `let` 将 `optional` 解构成 `Some(i)` 时，就
+    // 执行语句块（`{}`）。否则中断退出（`break`）。
+    while let Some(i) = optional {
+        if i > 9 {
+            println!("Greater than 9, quit!");
+            optional = None;
+        } else {
+            println!("`i` is `{:?}`. Try again.", i);
+            optional = Some(i + 1);
+        }
+        // ^ 使用的缩进更少，并且不用显式地处理失败情况。
+    }
+    // ^ `if let` 有额外可选的 `else`/`else if` 分句，
+    // 而 `while let` 没有。
+}
+```
+
+参考：
+[RFC | 官方](http://github.com/rust-lang/rfcs/pull/214)， 
+[while let | 通过例子学Rust](http://rustwiki.org/rust-by-example/flow_control/while_let.html)
