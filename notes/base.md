@@ -217,6 +217,23 @@ fn reverse(pair: (i32, bool)) -> (bool, i32) {
 字符串 slice
 
 
+### 类型转换
+
+Rust 不会隐式类型转换，只能使用 `as` 关键字进行显式类型转换。
+
+```rust
+let decimal = 65.4321_f32;
+
+// 报错！不能隐式转换类型
+//let integer: u8 = decimal;
+
+// 显式转换类型
+let integer = decimal as u8;
+let character = integer as char;
+
+println!("Casting: {} -> {} -> {}", decimal, integer, character);
+```
+
 
 ## 运算符
 
