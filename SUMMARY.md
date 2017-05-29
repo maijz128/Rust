@@ -26,7 +26,8 @@
   * [5. 运算符重载](notes/more.md#运算符重载)
 * [6. 补充](none.md)
   * [1. 注释](notes/more.md#注释)
-  * [2. 属性](notes/attribute.md)
+  * [2. 别名](notes/alias.md)
+  * [3. 属性](notes/attribute.md)
 * [7. 测试](notes/testing.md)
 * [8. 交叉编译](notes/cross-compiler.md)
 
