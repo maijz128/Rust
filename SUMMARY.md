@@ -1,8 +1,8 @@
 # Summary
 
 * [Introduction](README.md)
-* [Cargo 管理工具](notes/tool/cargo.md)
-* [语言基础](notes/base.md)
+- [Cargo 管理工具](notes/tool/cargo.md)
+- [语言基础](notes/base.md)
   * [变量](notes/base.md#变量)
   * [常量](notes/base.md#常量)
   * [类型](notes/base.md#类型)
@@ -12,7 +12,7 @@
 * [语言核心](notes/core/README.md)
   * [所有权](notes/core/ownership.md)
   * [生命周期](notes/core/lifetime.md)
-* 自定义类型与接口
+* [自定义类型与接口](zi-ding-yi-lei-xing-yu-jie-kou.md)
   * [结构体](notes/struct.md)
   * [枚举](notes/enum.md)
   * [trait](notes/trait.md)
