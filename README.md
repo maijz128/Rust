@@ -16,10 +16,10 @@
 1. [Cargo 管理工具](notes/cargo.md)
 2. [语言基础](notes/base.md)
     1. [变量](notes/base.md#变量)
-    2. [函数](notes/base.md#函数)
-    3. [类型](notes/base.md#类型)
-    4. [运算符](notes/base.md#运算符)
-    5. [控制流](notes/base.md#控制流)
+    2. [类型](notes/base.md#类型)
+    3. [运算符](notes/base.md#运算符)
+    4. [控制流](notes/base.md#控制流)
+    5. [函数](notes/base.md#函数)
 3. 语言核心
     1. [所有权](notes/ownership.md)
     2. [生命周期](notes/lifetime.md)
@@ -28,6 +28,7 @@
     2. [枚举](notes/struct-enum-trait.md#枚举enum)
     3. [trait](notes/struct-enum-trait.md#trait)
 5. 语言高阶
+    1. [slice（切片）](notes/std/slice.md)
     1. [模式匹配](notes/match.md)
         1. [`match` 控制流运算符](notes/match.md#match-控制流运算符)
         2. [`if let` 简单控制流](notes/match.md#if-let-简单控制流)
