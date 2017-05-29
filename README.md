@@ -19,7 +19,7 @@
     2. [类型](notes/base.md#类型)
     3. [运算符](notes/base.md#运算符)
     4. [控制流](notes/base.md#控制流)
-    5. [函数](notes/base.md#函数)
+    5. [函数](notes/fn/fn.md)
 3. 语言核心
     1. [所有权](notes/ownership.md)
     2. [生命周期](notes/lifetime.md)
