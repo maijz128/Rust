@@ -1,8 +1,8 @@
 # Summary
 
 * [Introduction](README.md)
-- [Cargo 管理工具](notes/tool/cargo.md)
-- [语言基础](notes/base.md)
+* [Cargo 管理工具](notes/tool/cargo.md)
+* [语言基础](notes/base.md)
   * [变量](notes/base.md#变量)
   * [常量](notes/base.md#常量)
   * [类型](notes/base.md#类型)
