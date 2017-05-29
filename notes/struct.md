@@ -4,32 +4,59 @@
 
 Rust中的结构体相当于其他语言的类（Class）
 
-例：
+定义：
 
 ```rust
+
+// 单元结构体
+struct Nil;
+
+// 元组结构体
+struct Pair(i32, f32);
+
+// 带有字段的结构体
 struct  User {
     username: String,
     email: String,
-    sign_in_count: u64,
-    active: bool,
 }
 ```
 
-使用：
+实例化：
 
 ```rust
+// 实例化一个单元结构体
+let _nil = Nil;
+
+// 实例化一个元组结构体
+let pair = Pair(1, 0.1);
+
 let user1 = User {
     email: String::from("someone@example.com"),
     username: String::from("someusername123"),
-    active: true,
-    sign_in_count: 1,
 };
 ```
 
-获取成员：
+访问字段：
 
 ```rust
-user1.username
+println!("user name: {}", user1.username);
+
+// 访问元组结构体的字段
+println!("pair contains {:?} and {:?}", pair.0, pair.1);
+```
+
+解构：
+
+```rust
+ // 解构带有字段的结构体并使用 `let` 来绑定
+let User { email: u_email, username: u_name} = user1;
+
+println!("name: {:?}  email: {:?}", u_name, u_email);
+
+ // 解构一个元组结构体
+let Pair(integer, decimal) = pair;
+
+println!("pair contains {:?} and {:?}", integer, decimal);
 ```
 
 
