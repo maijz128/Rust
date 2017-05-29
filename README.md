@@ -28,6 +28,7 @@
     2. [枚举](notes/struct-enum-trait.md#枚举enum)
     3. [trait](notes/struct-enum-trait.md#trait)
 5. 语言高阶
+    1. [表达式](notes/expression.md)
     1. [slice（切片）](notes/std/slice.md)
     1. [模式匹配](notes/match.md)
         1. [`match` 控制流运算符](notes/match.md#match-控制流运算符)
