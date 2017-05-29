@@ -12,7 +12,7 @@
 * [3. 语言核心](notes/core/README.md)
   * [1. 所有权](notes/core/ownership.md)
   * [2. 生命周期](notes/core/lifetime.md)
-* [4. 自定义类型与接口](zi-ding-yi-lei-xing-yu-jie-kou.md)
+* [4. 自定义类型与接口](none.md)
   * [1. 结构体](notes/struct.md)
   * [2. 枚举](notes/enum.md)
   * [3. trait](notes/trait.md)
