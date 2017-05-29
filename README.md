@@ -6,44 +6,12 @@
 
 
 
-
-
 ### Rust Version: 1.17.0 (2017-04-27)
 
 
-### 目录：
-
-1. [Cargo 管理工具](notes/cargo.md)
-2. [语言基础](notes/base.md)
-    1. [变量](notes/base.md#变量)
-    2. [常量](notes/base.md#常量)
-    3. [类型](notes/base.md#类型)
-    4. [运算符](notes/base.md#运算符)
-    5. [控制流](notes/base.md#控制流)
-    6. [函数](notes/fn/fn.md)
-3. 语言核心
-    1. [所有权](notes/ownership.md)
-    2. [生命周期](notes/lifetime.md)
-4. 自定义类型与接口
-    1. [结构体](notes/struct.md)
-    2. [枚举](notes/enum.md)
-    3. [trait](notes/trait.md)
-5. 语言高阶
-    1. [表达式](notes/expression.md)
-    1. [slice（切片）](notes/std/slice.md)
-    1. [模式匹配](notes/match.md)
-        1. [`match` 控制流运算符](notes/match.md#match-控制流运算符)
-        2. [`if let` 简单控制流](notes/match.md#if-let-简单控制流)
-    2. [泛型](notes/generics.md)
-    3. [运算符重载](notes/more.md#运算符重载)
-6. 补充
-    1. [注释](notes/more.md#注释)
-6. [测试](notes/testing.md)
-7. [交叉编译](notes/cross-compiler.md)
 
 
-
-
+在线浏览：[GitBook](http://maijz128.gitbooks.io/rust/content/)
 
 
 
