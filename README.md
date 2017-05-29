@@ -20,7 +20,6 @@
     3. [类型](notes/base.md#类型)
     4. [运算符](notes/base.md#运算符)
     5. [控制流](notes/base.md#控制流)
-    6. [注释](notes/base.md#注释)
 3. 语言核心
     1. [所有权](notes/ownership.md)
     2. [生命周期](notes/lifetime.md)
@@ -34,6 +33,8 @@
         2. [`if let` 简单控制流](notes/match.md#if-let-简单控制流)
     2. [泛型](notes/generics.md)
     3. [运算符重载](notes/more.md#运算符重载)
+6. 补充
+    1. [注释](notes/more.md#注释)
 6. [测试](notes/testing.md)
 7. [交叉编译](notes/cross-compiler.md)
 
