@@ -43,18 +43,19 @@ fn main() {
 
 ## 注释
 
-### 行注释（line comments）
+### 普通注释
 
-```rust
-// Line comments are anything after ‘//’ and extend to the end of the line.
+普通注释的内容将被编译器忽略掉
 
-let x = 5; // this is also a line comment.
+```
+ // 单行注释，注释内容直到行尾。
+ /* 块注释， 注释内容一直到结束分隔符。 */
 ```
 
 
-### 文档注释（doc comments）
+### 文档注释
 
-文档注释使用 `///` 而不是 `//`，并且内建[Markdown](http://en.wikipedia.org/wiki/Markdown)标记支持：
+文档注释的内容将被解析成 HTML 帮助文档，内建[Markdown](http://en.wikipedia.org/wiki/Markdown)标记支持。
 
 ```rust
 /// Adds one to the number given.
@@ -78,6 +79,12 @@ fn add_one(x: i32) -> i32 {
 
 
 使用 `//!` 的注释块，在HTML文档中可以切换显示或隐藏。
+
+```rust
+//! begin content
+//! content
+//! end content
+```
 
 
 
