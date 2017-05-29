@@ -24,10 +24,10 @@
 3. 语言核心
     1. [所有权](notes/ownership.md)
     2. [生命周期](notes/lifetime.md)
-4. [结构体、枚举、trait](notes/struct-enum-trait.md)
-    1. [结构体](notes/struct-enum-trait.md#结构体struct)
-    2. [枚举](notes/struct-enum-trait.md#枚举enum)
-    3. [trait](notes/struct-enum-trait.md#trait)
+4. 自定义类型与接口
+    1. [结构体](notes/struct.md)
+    2. [枚举](notes/enum.md)
+    3. [trait](notes/trait.md)
 5. 语言高阶
     1. [表达式](notes/expression.md)
     1. [slice（切片）](notes/std/slice.md)
