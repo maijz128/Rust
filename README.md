@@ -1,4 +1,4 @@
-# Rust 学习笔记
+# [Rust 学习笔记](http://github.com/maijz128/Rust)
 
 <p align="center"><a target="_blank" href="http://www.rust-lang.org"><img src="logo/rust-logo-256x256-blk.png"></a></p>
 
