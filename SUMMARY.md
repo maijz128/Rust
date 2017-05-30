@@ -16,6 +16,7 @@
     * [1. 结构体](notes/struct.md)
     * [2. 枚举](notes/enum.md)
     * [3. trait](notes/trait.md)
+* [模块](notes/module.md)
 * [5. 语言高阶](none.md)
     * [1. 表达式](notes/expression.md)
     * [2. slice（切片）](notes/std/slice.md)
