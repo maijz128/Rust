@@ -3,6 +3,13 @@
 
 ## `match`
 
+Rust 通过 `match` 关键字来提供模式匹配，用法和 C 语言的的 `switch` 类似。
+
+在匹配复合数据类型（元组、枚举、结构体）时，需要解构它。
+
+注：Rust 中的匹配是穷尽的（*exhaustive）：必须穷举到最后的可能性来使代码有效。
+
+
 例子：硬币（美国）分类器
 
 ```rust
@@ -51,8 +58,6 @@ let six = plus_one(five);
 let none = plus_one(None);
 ```
 
-注：Rust 中的匹配是穷尽的（*exhaustive）：必须穷举到最后的可能性来使代码有效。
-
 
 ### `_` 通配符
 
@@ -87,23 +92,64 @@ match x {
 let x = 1;
 
 match x {
-    1 ... 5 => println!("one through five"),
+    1...5 => println!("one through five"),
     _ => println!("anything"),
 }
 ```
 
-### 绑定
+### 绑定名字
 
-使用@把值绑定到名字上：
+使用 `@` 把值绑定到名字上：
 
 ```rust
 let x = 1;
 
 match x {
-    e @ 1 ... 5 => println!("got a range element {}", e),
+    e @ 1...5 => println!("got a range element {}", e),
     _ => println!("anything"),
 }
 ```
+
+### 匹配元组
+
+```rust
+fn main() {
+    let point = (0, -2); // 试一试将不同的值赋给 `point`
+
+    println!("point: {:?}", point);
+    // match 可以解构一个元组
+    match point {
+        (0, y) => println!("`y` is `{:?}", y),
+        (x, y) => println!("`x` is `{:?}` and `y` is `{:?}", x, y),
+    }
+}
+```
+
+### 匹配结构体
+
+```rust
+struct Point {
+    x: i32,
+    y: i32,
+}
+
+let origin = Point { x: 0, y: 0 };
+
+match origin {
+    Point { x, y } => println!("({},{})", x, y),
+}
+
+// 给字段不同的名字
+match origin {
+    Point { x: x1, y: y1 } => println!("({},{})", x1, y1),
+}
+
+// 只匹配部分字段 `y`，忽略其他的
+match origin {
+    Point { y, .. } => println!("y is {}", y),
+}
+```
+
 
 ## `if let` 简单匹配
 
@@ -117,6 +163,7 @@ match some_u8_value {
     _ => (),
 }
 
+// 跟上面代码功能一样
 if let Some(3u8) = some_u8_value {
     println!("three");
 }
