@@ -1,0 +1,13 @@
+{
+	"title": "Rust",
+	"description": "Rust Ñ§Ï°±Ê¼Ç",
+	"language": "zh",
+	"plugins": [
+		"github"
+	],
+	 "pluginsConfig": {
+		"github" : {
+			"url": "http://github.com/maijz128/Rust"
+		}
+	 }
+}
