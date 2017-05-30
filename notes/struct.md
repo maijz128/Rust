@@ -71,8 +71,20 @@ struct Rectangle {
 }
 
 impl Rectangle {
+    // `&self` 为 `self: &Self` 的语法糖
     fn area(&self) -> u32 {
         self.length * self.width
+    }
+
+    // 这个方法“消费”调用者对象的资源
+    // `self` 为 `self: Self` 的语法糖
+    fn destroy(self) {
+        // 解构 `self`
+        let Rectangle{length, width} = self;
+
+        println!("Destroying Rectangle({}, {})", length, width);
+
+        // `length` 和 `width` 离开作用域后释放
     }
 }
 
@@ -83,6 +95,7 @@ fn main() {
         "The area of the rectangle is {} square pixels.",
         rect1.area()
     );
+    rect1.destroy();
 }
 ```
 
