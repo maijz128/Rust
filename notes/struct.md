@@ -76,28 +76,28 @@ impl Rectangle {
         self.length * self.width
     }
 
-    // 这个方法“消费”调用者对象的资源
-    // `self` 为 `self: Self` 的语法糖
-    fn destroy(self) {
-        // 解构 `self`
-        let Rectangle{length, width} = self;
-
-        println!("Destroying Rectangle({}, {})", length, width);
-
-        // `length` 和 `width` 离开作用域后释放
+    // 这个方法要求调用者对象是可变的
+    // `&mut self` 为 `self: &mut Self` 的语法糖
+    fn zoom(&mut self, size: u32) {
+        self.length *= size;
+        self.width *= size;
     }
 }
 
 fn main() {
-    let rect1 = Rectangle { length: 50, width: 30 };
-
+    let mut rect1 = Rectangle { length: 50, width: 30 };
+    
+    rect1.zoom(2);
+    
     println!(
         "The area of the rectangle is {} square pixels.",
         rect1.area()
     );
-    rect1.destroy();
 }
 ```
+
+### 
+
 
 ### 关联函数 ≈ 类方法
 
@@ -113,6 +113,37 @@ impl Rectangle {
 
 ```rust
 let sq = Rectangle::square(3);
+```
+
+### 实现析构函数
+
+`destroy` 方法会拿到 `Rectangle` 对象的[所有权](core/ownership.md)，并且会在离开作用域后释放它。
+
+```rust
+impl Rectangle {
+    // 这个方法“消费”调用者对象的资源
+    // `self` 为 `self: Self` 的语法糖
+    fn destroy(self) {
+        // 解构 `self`
+        let Rectangle{length, width} = self;
+
+        println!("Destroying Rectangle({}, {})", length, width);
+
+        // `length` 和 `width` 离开作用域后释放
+    }
+}
+```
+
+使用：
+
+```rust
+rect1.destroy();
+
+// rect1析构后再使用将会触发error
+println!(
+    "The area of the rectangle is {} square pixels.",
+    rect1.area()
+);
 ```
 
 ### 输出结构体（struct）
