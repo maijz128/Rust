@@ -34,4 +34,5 @@
     * [3. 属性](notes/attribute.md)
 * [7. 测试](notes/testing.md)
 * [8. 交叉编译](notes/cross-compiler.md)
+* [语法糖索引](notes/sugar.md)
 
