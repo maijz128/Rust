@@ -15,6 +15,15 @@
 
 
 
+## 参考
+
+[Rust 程序设计语言（第一版）](http://github.com/KaiserY/rust-book-chinese)
+
+[Rust 程序设计语言（第二版）](http://github.com/KaiserY/trpl-zh-cn)
+
+[Rust by Example 中文版](http://github.com/rust-lang-cn/rust-by-example-cn)
+
+[Rust Primer](http://github.com/rustcc/RustPrimer)
 
 
 
