@@ -38,6 +38,9 @@ fn main(){
 use 声明可以将一个完整的路径绑定到一个新的名字，从而更容易访问。
 
 ```rust
+// 声明引用 `std::fmt` 下的 `Debug` 和 `Display`
+use std::fmt::{Debug, Display};
+
 // 将 `deeply::nested::function` 路径绑定到 `other_function`。
 use deeply::nested::function as other_function;
 
