@@ -17,6 +17,10 @@
 
 ## 参考
 
+[官方参考手册](http://doc.rust-lang.org/stable/reference/)
+
+[官方标准库](http://doc.rust-lang.org/std/)
+
 [Rust 程序设计语言（第一版）](http://github.com/KaiserY/rust-book-chinese)
 
 [Rust 程序设计语言（第二版）](http://github.com/KaiserY/trpl-zh-cn)
