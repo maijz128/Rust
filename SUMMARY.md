@@ -10,6 +10,7 @@
     * [5. 控制流](notes/base.md#控制流)
     * [6. 函数](notes/fn/fn.md)
 * [3. 语言核心](notes/core/README.md)
+    * [字符串](notes/core/string.md)
     * [1. 所有权](notes/core/ownership.md)
     * [2. 生命周期](notes/core/lifetime.md)
 * [4. 自定义类型与接口](none.md)
